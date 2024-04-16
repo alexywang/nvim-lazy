@@ -15,13 +15,7 @@ vim.keymap.set("n", "<leader>sv", vim.cmd.split, { noremap = true })
 vim.keymap.set("n", "<leader>ss", vim.cmd.vsplit, { noremap = true })
 vim.keymap.set("n", "<C-e>", ":wincmd w<CR>", { noremap = true, silent = true })
 
--- bottom pane terminal
-vim.cmd("source ~/.config/nvim/lua/config/termtoggle.vim")
-
-vim.keymap.set("n", "<C-t>", ":call TermToggle(12)<CR>", { noremap = true, silent = true })
-vim.keymap.set("t", "<C-t>", "<C-\\><C-n>:call TermToggle(13)<CR>", { noremap = true, silent = true })
-vim.keymap.set("i", "<C-t>", "<Esc>:call TermToggle(12)<CR>", { noremap = true, silent = true })
-
+-- disable annoying shit
 vim.keymap.set("n", "<A-j>", "", { noremap = true, silent = true })
 vim.keymap.set("n", "<A-k>", "", { noremap = true, silent = true })
 vim.keymap.set("i", "<A-j>", "", { noremap = true, silent = true })

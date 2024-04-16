@@ -1,5 +1,4 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
-require("plugins.copilot")
 require("config.lazy")
 
 vim.g.gruvbox_baby_function_style = "NONE"
