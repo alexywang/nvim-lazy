@@ -3,4 +3,3 @@
 -- Add any additional options here
 --
 vim.opt.confirm = false
-vim.opt.guicursor = "a:blinkon50"

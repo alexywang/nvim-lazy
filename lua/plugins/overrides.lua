@@ -3,13 +3,14 @@ return {
     "nvim-telescope/telescope.nvim",
     keys = {
       { "<leader>ss", false },
+      { "<C-p>", ":Telescope git_files<CR>", silent = true, noremap = true },
     },
   },
   {
     "akinsho/bufferline.nvim",
     keys = {
-      { "<C-[>", ":BufferLineCyclePrev<CR>", silent = true },
-      { "<C-]>", ":BufferLineCycleNext<CR>", silent = true },
+      { "<C-[>", ":BufferLineCyclePrev<CR>", silent = true, noremap = true },
+      { "<C-]>", ":BufferLineCycleNext<CR>", silent = true, noremap = true },
       { "<Esc>", "", noremap = true },
     },
   },
