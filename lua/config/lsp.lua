@@ -1,7 +1,13 @@
 local lspconfig = require("lspconfig")
 
-require("lspconfig-bundler").setup()
+-- require("lspconfig-bundler").setup()
 
-lspconfig.solargraph.setup({
-  cmd = { "bundle", "exec", "solargraph", "stdio" },
-})
+-- lspconfig.solargraph.setup({
+--   settings = {
+--     cmd = { "bundle", "exec", "solargraph", "stdio" },
+--     solargraph = {
+--       useBundler = true,
+--       bundlerPath = "/Users/alexwng/.rbenv/shims/bundler",
+--     },
+--   },
+-- })
