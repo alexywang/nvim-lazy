@@ -15,7 +15,7 @@ return {
     },
   },
   {
-    "lukas-reinke/indent-blankline.nvim",
+    "lukas-reineke/indent-blankline.nvim",
     opts = {
       indent = {
         char = "▏",
@@ -33,7 +33,7 @@ return {
     },
   },
   {
-    "echanovski/mini.animate",
+    "echasnovski/mini.animate",
     opts = {
       cursor = {
         timing = require("mini.animate").gen_timing.none(),
