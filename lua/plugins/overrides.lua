@@ -38,6 +38,10 @@ return {
       cursor = {
         timing = require("mini.animate").gen_timing.none(),
       },
+      scroll = {
+        enable = false,
+        timing = require("mini.animate").gen_timing.none(),
+      },
     },
   },
 }
