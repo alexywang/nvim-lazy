@@ -9,8 +9,8 @@ return {
   {
     "akinsho/bufferline.nvim",
     keys = {
-      { "<C-[>", ":BufferLineCyclePrev<CR>", silent = true, noremap = true },
-      { "<C-]>", ":BufferLineCycleNext<CR>", silent = true, noremap = true },
+      { "<Left>", ":BufferLineCyclePrev<CR>", silent = true, noremap = true },
+      { "<Right>", ":BufferLineCycleNext<CR>", silent = true, noremap = true },
       { "<Esc>", "", noremap = true },
     },
   },
