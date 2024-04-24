@@ -6,3 +6,4 @@ vim.opt.confirm = false
 
 vim.opt_local.formatoptions:remove({ "r", "o" }) -- prevent comments from continuing after enter
 vim.cmd("autocmd FileType ruby setlocal indentkeys-=.") -- ruby indent quirk
+vim.opt.relativenumber = false

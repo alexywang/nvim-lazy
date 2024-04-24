@@ -44,4 +44,17 @@ return {
       },
     },
   },
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = {
+      sections = {
+        lualine_x = {
+          { require("gitblame").get_current_blame_text, cond = require("gitblame").is_blame_text_available },
+        },
+      },
+      options = {
+        globalstatus = false,
+      },
+    },
+  },
 }
