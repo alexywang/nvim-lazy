@@ -13,6 +13,7 @@ vim.keymap.set("n", "<leader>Y", '"+Y')
 vim.keymap.set("n", "<leader>sv", vim.cmd.split, { noremap = true })
 vim.keymap.set("n", "<leader>ss", vim.cmd.vsplit, { noremap = true })
 vim.keymap.set("n", "<C-e>", ":wincmd w<CR>", { noremap = true, silent = true })
+vim.keymap.set("t", "<C-e>", "<C-\\><C-n>:wincmd w<CR>", { noremap = true, silent = true })
 
 -- disable annoying shit
 vim.keymap.set("n", "<A-j>", "", { noremap = true, silent = true })
