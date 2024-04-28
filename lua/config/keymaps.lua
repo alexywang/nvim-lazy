@@ -24,3 +24,6 @@ vim.keymap.set("i", "<A-k>", "", { noremap = true, silent = true })
 -- copy path
 vim.api.nvim_create_user_command("CopyRelPath", "call setreg('+', expand('%'))", {})
 vim.keymap.set("n", "<leader>p", ":CopyRelPath<CR>", { noremap = true, silent = true })
+
+--show diagnostic
+vim.keymap.set("n", "<leader>dd", "<cmd> lua vim.diagnostic.open_float() <CR>", { noremap = true, silent = true })
