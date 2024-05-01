@@ -14,6 +14,10 @@ vim.keymap.set("n", "<leader>sv", vim.cmd.split, { noremap = true })
 vim.keymap.set("n", "<leader>ss", vim.cmd.vsplit, { noremap = true })
 vim.keymap.set("n", "<C-e>", ":wincmd w<CR>", { noremap = true, silent = true })
 vim.keymap.set("t", "<C-e>", "<C-\\><C-n>:wincmd w<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<Left>", ":wincmd h<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<Right>", ":wincmd l<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<Up>", ":wincmd k<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<Down>", ":wincmd j<CR>", { noremap = true, silent = true })
 
 -- disable annoying shit
 vim.keymap.set("n", "<A-j>", "", { noremap = true, silent = true })
