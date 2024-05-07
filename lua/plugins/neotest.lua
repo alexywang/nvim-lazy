@@ -11,6 +11,7 @@ return {
     config = function()
       require("neotest").setup({
         adapters = { require("neotest-rspec") },
+        discovery = { enabled = false },
       })
     end,
     keys = function()
