@@ -1,6 +1,19 @@
 return {
   { "xiyaowong/transparent.nvim" },
-  { "marko-cerovac/material.nvim" },
+  {
+    "marko-cerovac/material.nvim",
+    config = function()
+      vim.api.nvim_create_user_command("Material", function()
+        vim.cmd("colorscheme material")
+        vim.o.background = "dark"
+      end, {})
+
+      vim.api.nvim_create_user_command("Cat", function()
+        vim.cmd("colorscheme catppuccin")
+        vim.o.background = "dark"
+      end, {})
+    end,
+  },
   { "sainnhe/gruvbox-material" },
   {
     "rose-pine/neovim",
