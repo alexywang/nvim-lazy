@@ -12,3 +12,5 @@ vim.cmd("autocmd FileType ruby setlocal indentkeys-=.") -- ruby indent quirk
 
 vim.opt_local.spell = true
 vim.opt_local.spelllang = "en_us"
+
+vim.lsp.set_log_level("off")
