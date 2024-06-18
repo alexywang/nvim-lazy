@@ -9,6 +9,7 @@ vim.opt.swapfile = false
 vim.cmd.colorscheme("gruvbox-baby")
 
 vim.cmd("autocmd FileType ruby setlocal indentkeys-=.") -- ruby indent quirk
+vim.cmd("autocmd FileType markdown setlocal conceallevel=0") -- don't hide tildes and shit
 
 vim.opt_local.spell = true
 vim.opt_local.spelllang = "en_us"
