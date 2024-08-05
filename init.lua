@@ -14,4 +14,6 @@ vim.cmd("autocmd FileType markdown setlocal conceallevel=0") -- don't hide tilde
 vim.opt_local.spell = true
 vim.opt_local.spelllang = "en_us"
 
-vim.lsp.set_log_level("off")
+vim.lsp.set_log_level("error")
+
+vim.cmd("set title")

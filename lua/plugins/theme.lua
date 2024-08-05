@@ -43,6 +43,15 @@ return {
     end,
   },
   {
+    "folke/tokyonight.nvim",
+    config = function()
+      vim.api.nvim_create_user_command("Tokyo", function()
+        vim.cmd("colorscheme tokyonight")
+        vim.o.background = "dark"
+      end, {})
+    end,
+  },
+  {
     "ellisonleao/gruvbox.nvim",
     config = function()
       vim.api.nvim_create_user_command("Light", function()
