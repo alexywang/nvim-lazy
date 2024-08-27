@@ -1,17 +1,14 @@
 return {
-  { "mihyaeru21/nvim-lspconfig-bundler" },
+  {
+    "mihyaeru21/nvim-lspconfig-bundler",
+    dependencies = { "neovim/nvim-lspconfig" },
+    config = function()
+      require("lspconfig-bundler").setup()
+    end,
+  },
   {
     "neovim/nvim-lspconfig",
-    format = {
-      timeout_ms = 800,
-    },
-    opts = {
-      servers = {
-        solargraph = {
-          cmd = { "bundle", "exec", "solargraph", "stdio" },
-          prefix = "solargraph",
-        },
-      },
-    },
+    -- Ensure this loads after lspconfig-bundler
+    after = "nvim-lspconfig-bundler",
   },
 }
