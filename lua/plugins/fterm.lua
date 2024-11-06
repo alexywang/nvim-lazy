@@ -19,7 +19,7 @@ return {
         local path = vim.fn.expand("%:.")
         local fterm = require("FTerm")
         fterm.open()
-        fterm.run("bin/rspec " .. path)
+        fterm.run("bundle exec rspec " .. path)
       end,
 
       desc = "Run rspec for the current file in FTerm",
