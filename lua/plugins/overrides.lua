@@ -17,19 +17,11 @@ return {
   },
   {
     "lukas-reineke/indent-blankline.nvim",
+    version = "2.20.8",
     opts = {
       indent = {
         char = "▏",
         tab_char = "▏",
-      },
-    },
-  },
-  {
-    "echasnovski/mini.indentscope",
-    opts = {
-      symbol = "▏",
-      draw = {
-        animation = require("mini.indentscope").gen_animation.linear({ duration = 5 }),
       },
     },
   },
