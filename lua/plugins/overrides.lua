@@ -17,6 +17,7 @@ return {
   },
   {
     "lukas-reineke/indent-blankline.nvim",
+    version = "v2.20.3",
     opts = {
       indent = {
         char = "▏",
@@ -46,7 +47,7 @@ return {
     },
   },
   {
-    "williamboman/mason.nvim",
+    "https://github.com/mason-org/mason.nvim.git",
     opts = function(_, opts)
       table.insert(opts.ensure_installed, "prettier")
     end,
