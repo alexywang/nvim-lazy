@@ -17,16 +17,18 @@ return {
   },
   {
     "lukas-reineke/indent-blankline.nvim",
-    version = "v2.20.3",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
     opts = {
       indent = {
         char = "▏",
-        tab_char = "▏",
       },
     },
   },
   {
     "echasnovski/mini.indentscope",
+    enabled = true,
     opts = {
       symbol = "▏",
       draw = {
