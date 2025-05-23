@@ -17,15 +17,18 @@ return {
   },
   {
     "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
     opts = {
       indent = {
         char = "▏",
-        tab_char = "▏",
       },
     },
   },
   {
     "echasnovski/mini.indentscope",
+    enabled = true,
     opts = {
       symbol = "▏",
       draw = {
@@ -46,7 +49,7 @@ return {
     },
   },
   {
-    "williamboman/mason.nvim",
+    "https://github.com/mason-org/mason.nvim.git",
     opts = function(_, opts)
       table.insert(opts.ensure_installed, "prettier")
     end,
