@@ -17,3 +17,14 @@ vim.opt_local.spelllang = "en_us"
 vim.lsp.set_log_level("error")
 
 vim.cmd("set title")
+if vim.g.vscode then
+  local vscode = require("vscode-neovim")
+  vim.keymap.set("n", "<leader>sv", function()
+    vscode.call("workbench.action.splitEditorDown")
+  end, { noremap = true, silent = true })
+
+  vim.keymap.set("n", "<leader>ss", function()
+    vscode.call("workbench.action.splitEditorRight")
+  end, { noremap = true, silent = true })
+else
+end
