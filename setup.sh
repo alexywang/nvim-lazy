@@ -1,17 +1,17 @@
 #!/bin/bash
 
 # Default profile name
-PROFILE=burner
+BEDROCK_PROFILE=bedrock-dev
 
 # Get values from AWS config/credentials
-ACCESS_KEY=$(aws configure get aws_access_key_id --profile "$PROFILE")
-SECRET_KEY=$(aws configure get aws_secret_access_key --profile "$PROFILE")
-REGION=$(aws configure get region --profile "$PROFILE")
-SESSION_TOKEN=$(aws configure get aws_session_token --profile "$PROFILE")
+BEDROCK_ACCESS_KEY=$(aws configure get aws_access_key_id --profile "$BEDROCK_PROFILE")
+BEDROCK_SECRET_KEY=$(aws configure get aws_secret_access_key --profile "$BEDROCK_PROFILE")
+BEDROCK_REGION=$(aws configure get region --profile "$BEDROCK_PROFILE")
+BEDROCK_SESSION_TOKEN=$(aws configure get aws_session_token --profile "$BEDROCK_PROFILE")
 
 # Create the BEDROCK_KEYS string
-REGION=${REGION:-us-east-1}
-BEDROCK_KEYS="$ACCESS_KEY,$SECRET_KEY,$REGION,$SESSION_TOKEN"
+BEDROCK_REGION=${REGION:-us-west-2}
+BEDROCK_KEYS="$BEDROCK_ACCESS_KEY,$BEDROCK_SECRET_KEY,$BEDROCK_REGION,$BEDROCK_SESSION_TOKEN"
 
 # Export the variable
 export BEDROCK_KEYS="$BEDROCK_KEYS"
