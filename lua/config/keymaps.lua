@@ -10,14 +10,30 @@ vim.keymap.set("v", "<leader>y", '"+y')
 vim.keymap.set("n", "<leader>Y", '"+Y')
 
 -- split panes
-vim.keymap.set("n", "<leader>sv", vim.cmd.split, { noremap = true })
-vim.keymap.set("n", "<leader>ss", vim.cmd.vsplit, { noremap = true })
-vim.keymap.set("n", "<C-e>", ":wincmd w<CR>", { noremap = true, silent = true })
-vim.keymap.set("t", "<C-e>", "<C-\\><C-n>:wincmd w<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<Left>", ":wincmd h<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<Right>", ":wincmd l<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<Up>", ":wincmd k<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<Down>", ":wincmd j<CR>", { noremap = true, silent = true })
+if vim.g.vscode then
+  local vscode = require("vscode")
+  vim.keymap.set("n", "<leader>sv", function()
+    vscode.call("workbench.action.splitEditorDown")
+  end, { noremap = true, silent = true })
+
+  vim.keymap.set("n", "<leader>ss", function()
+    vscode.call("workbench.action.splitEditorRight")
+  end, { noremap = true, silent = true })
+
+  -- vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", { noremap = true, silent = true })
+  -- vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", { noremap = true, silent = true })
+  -- vim.keymap.set("n", "<C-k>", ":wincmd k<CR>", { noremap = true, silent = true })
+  -- vim.keymap.set("n", "<C-j>", ":wincmd j<CR>", { noremap = true, silent = true })
+else
+  vim.keymap.set("n", "<leader>sv", vim.cmd.split, { noremap = true })
+  vim.keymap.set("n", "<leader>ss", vim.cmd.vsplit, { noremap = true })
+  vim.keymap.set("n", "<Left>", ":wincmd h<CR>", { noremap = true, silent = true })
+  vim.keymap.set("n", "<Right>", ":wincmd l<CR>", { noremap = true, silent = true })
+  vim.keymap.set("n", "<Up>", ":wincmd k<CR>", { noremap = true, silent = true })
+  vim.keymap.set("n", "<Down>", ":wincmd j<CR>", { noremap = true, silent = true })
+  vim.keymap.set("n", "<C-e>", ":wincmd w<CR>", { noremap = true, silent = true })
+  vim.keymap.set("t", "<C-e>", "<C-\\><C-n>:wincmd w<CR>", { noremap = true, silent = true })
+end
 
 -- disable annoying shit
 vim.keymap.set("n", "<A-j>", "", { noremap = true, silent = true })
