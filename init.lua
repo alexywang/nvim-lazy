@@ -2,18 +2,14 @@
 require("config.lazy")
 
 if vim.g.vscode then
-  local vscode = require("vscode")
-  vim.keymap.set("n", "<leader>sv", function()
-    vscode.call("workbench.action.splitEditorDown")
-  end, { noremap = true, silent = true })
-
-  vim.keymap.set("n", "<leader>ss", function()
-    vscode.call("workbench.action.splitEditorRight")
-  end, { noremap = true, silent = true })
+else
+  vim.cmd.colorscheme("gruvbox-baby")
+  vim.g.gruvbox_baby_function_style = "NONE"
+  vim.g.gruvbox_baby_keyword_style = "NONE"
+  vim.keymap.set("n", "o", "ox<BS>", { noremap = true })
+  vim.keymap.set("n", "O", "Ox<BS>", { noremap = true })
 end
 
-vim.g.gruvbox_baby_function_style = "NONE"
-vim.g.gruvbox_baby_keyword_style = "NONE"
 vim.g.material_style = "palenight"
 vim.opt.swapfile = false
 
@@ -26,5 +22,3 @@ vim.opt_local.spelllang = "en_us"
 vim.lsp.set_log_level("error")
 
 vim.cmd("set title")
-
-vim.cmd.colorscheme("gruvbox-baby")

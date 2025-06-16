@@ -1,5 +1,13 @@
 return {
   {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
+        "glimmer",
+      })
+    end,
+  },
+  {
     "nvim-telescope/telescope.nvim",
     keys = {
       { "<leader>ss", false },

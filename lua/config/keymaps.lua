@@ -20,10 +20,13 @@ if vim.g.vscode then
     vscode.call("workbench.action.splitEditorRight")
   end, { noremap = true, silent = true })
 
-  -- vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", { noremap = true, silent = true })
-  -- vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", { noremap = true, silent = true })
-  -- vim.keymap.set("n", "<C-k>", ":wincmd k<CR>", { noremap = true, silent = true })
-  -- vim.keymap.set("n", "<C-j>", ":wincmd j<CR>", { noremap = true, silent = true })
+  vim.keymap.set("n", "<leader>ff", function()
+    vscode.call("workbench.action.quickOpen")
+  end, { noremap = true, silent = true })
+
+  vim.keymap.set("n", "<leader>sg", function()
+    vscode.call("workbench.action.findInFiles")
+  end, { noremap = true, silent = true })
 else
   vim.keymap.set("n", "<leader>sv", vim.cmd.split, { noremap = true })
   vim.keymap.set("n", "<leader>ss", vim.cmd.vsplit, { noremap = true })
