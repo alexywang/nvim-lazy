@@ -2,12 +2,17 @@
 require("config.lazy")
 
 if vim.g.vscode then
+  vim.keymap.set("n", "o", function()
+    require("vscode").action("editor.action.insertLineAfter", {
+      callback = function()
+        vim.cmd.startinsert({ bang = true })
+      end,
+    })
+  end)
 else
   vim.cmd.colorscheme("gruvbox-baby")
   vim.g.gruvbox_baby_function_style = "NONE"
   vim.g.gruvbox_baby_keyword_style = "NONE"
-  vim.keymap.set("n", "o", "ox<BS>", { noremap = true })
-  vim.keymap.set("n", "O", "Ox<BS>", { noremap = true })
 end
 
 vim.g.material_style = "palenight"
