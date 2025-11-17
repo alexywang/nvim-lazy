@@ -11,10 +11,13 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        solargraph = {
-          cmd = { "bundle", "exec", "solargraph", "stdio" },
-          prefix = "solargraph",
+        ruby_lsp = {
+          cmd = { "bundle", "exec", "ruby-lsp" },
         },
+        -- solargraph = {
+        --   cmd = { "bundle", "exec", "solargraph", "stdio" },
+        --   prefix = "solargraph",
+        -- },
         ember = {
           filetypes = { "handlebars", "glimmer", "ember", "javascript", "typescript" },
           root_dir = require("lspconfig").util.root_pattern("ember-cli-build.js", "package.json"),
